@@ -1,0 +1,41 @@
+<head>
+
+ <meta charset="utf-8">
+<script language="javascript">
+<!--
+	function login_ok() {
+		if (!document.login.name.value)
+		{
+			alert("아이디를 정말로 입력해주세요.");
+			document.login.name.focus(); // 이름 폼으로 이동
+			return false;
+		}
+		if (!document.login.age.value)
+		{
+			alert("나이를 입력해주세요.");
+			document.login.age.focus(); // 나이 폼으로 이동
+			return false;
+		}
+		if (isNaN(document.login.age.value))
+		{
+			alert("헐 숫자만 입력 ㅇㅇ");
+			document.login.age.focus(); // 나이 폼으로 이동
+			return false;
+		}
+		alert("아이디:\t" + document.login.name.value + "\n암호:\t" + document.login.age.value);
+	}
+//-->
+</script>
+</head>
+ 
+<body>
+ 
+<h1>고객등록</h1>
+<form name="login" action="http://iluku.net"> <!-- 조건이 맞으면 웹사이트로 이동 -->
+이름 : <input type="text" size="20" name="name" value="" /><br />
+나이 : <input type="text" size="20" name="age" value="" /><br /><br />
+<input type="submit" value="확인" onclick="return login_ok()" />
+</form>
+ 
+</body>
+</html>
